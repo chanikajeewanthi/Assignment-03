@@ -28,6 +28,11 @@
             height: 100vh;
             position: sticky;
             top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            margin: auto;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -35,17 +40,22 @@
             background-color: #dfe6e9;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
-        .card:nth-child(1) { background-color: white; }
+        .card:first-child { background-color: white; }
         .card:nth-child(2) { background-color: #46abf4; }
         .card:nth-child(3) { background-color: #555759; }
         .card:nth-child(4) { background-color: #e47341; }
+
         .card-title {
             position: absolute;
             top: 0;
             left: 0;
             font-size: 0.35em;
             font-weight: bold;
-            color: white;
+            /*align-items: center;*/
+            /*justify-content: center;*/
+            /*display: flex;*/
+            /*text-align: left;*/
+            color: black;
             background: red;
             padding: 0.5px 700px;
             border: 1px solid red;
@@ -71,21 +81,24 @@
 <body>
 <div class="container">
     <div class="card">
-        <span class="card-title">Card 1</span>
+        <div class="card-title">Card 1</div>
         Hello
     </div>
     <div class="card">
-        <span class="card-title">Card 2</span>
+        <div class="card-title">Card 2</div>
         How
     </div>
     <div class="card">
-        <span class="card-title">Card 3</span>
+        <div class="card-title">Card 3</div>
         Are
     </div>
     <div class="card">
-        <span class="card-title">Card 4</span>
+        <div class="card-title">Card 4</div>
         You..?
     </div>
 </div>
 </body>
 </html>
+
+
+

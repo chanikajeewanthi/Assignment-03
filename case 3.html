@@ -1,9 +1,12 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/lib/normalize.css">
+
     <title>Case 3</title>
     <style>
         * {
@@ -15,9 +18,6 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             height: 100vh;
             overflow: hidden;
         }
@@ -30,35 +30,33 @@
             height: 300px;
             background: gray;
             border-radius: 50%;
-            transform: translate(-50%, -50%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            margin-left: -150px;
+            margin-top: -150px;
         }
 
         .inner-circle {
-            position: fixed;
+            position: absolute;
             top: 50%;
             left: 50%;
-            width: 200px;
-            height: 200px;
+            width: 270px;
+            height: 270px;
             background: red;
             border-radius: 50%;
-            transform: translate(-50%, -50%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            margin-left: -135px;
+            margin-top: -135px;
         }
 
         .flow-circle, .next-circle, .third-circle {
             position: absolute;
-            width: 200px;
-            height: 200px;
+            width: 240px;
+            height: 240px;
             background: white;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            border: 1px solid black;
+            left: 15px;
+            top: 15px;
+            text-align: center;
+            line-height: 240px;
             opacity: 0;
         }
 
@@ -77,8 +75,8 @@
         }
 
         @keyframes moveCircles {
-            0% { transform: translateY(50px); opacity: 1; }
-            100% { transform: translateY(-100vh); opacity: 0; }
+            0% { top: 50px; opacity: 1; }
+            100% { top: -100vh; opacity: 0; }
         }
     </style>
 </head>
@@ -87,104 +85,11 @@
     <div class="inner-circle">
         <div class="flow-circle">Hello</div>
         <div class="next-circle">Welcome to</div>
-        <div class="third-circle">Institute of software engineering</div>
+        <div class="third-circle">Institute of Software Engineering</div>
     </div>
 </div>
 </body>
 </html>
 
 
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-<!--    <title>Fixed Circular Borders</title>-->
-<!--    <style>-->
-<!--        * {-->
-<!--            margin: 0;-->
-<!--            padding: 0;-->
-<!--            box-sizing: border-box;-->
-<!--        }-->
 
-<!--        body {-->
-<!--            font-family: Arial, sans-serif;-->
-<!--            background-color: #f5f5f5;-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            justify-content: center;-->
-<!--            height: 100vh;-->
-<!--            overflow: hidden;-->
-<!--        }-->
-
-<!--        .outer-circle {-->
-<!--            position: fixed;-->
-<!--            top: 50%;-->
-<!--            left: 50%;-->
-<!--            width: 300px;-->
-<!--            height: 300px;-->
-<!--            background: gray;-->
-<!--            border-radius: 50%;-->
-<!--            transform: translate(-50%, -50%);-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            justify-content: center;-->
-<!--        }-->
-
-<!--        .inner-circle {-->
-<!--            position: fixed;-->
-<!--            top: 50%;-->
-<!--            left: 50%;-->
-<!--            width: 200px;-->
-<!--            height: 200px;-->
-<!--            background: red;-->
-<!--            border-radius: 50%;-->
-<!--            transform: translate(-50%, -50%);-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            justify-content: center;-->
-<!--            overflow: hidden;-->
-<!--        }-->
-
-<!--        .flow-circle, .next-circle, .third-circle {-->
-<!--            position: absolute;-->
-<!--            width: 100px;-->
-<!--            height: 100px;-->
-<!--            background: white;-->
-<!--            border-radius: 50%;-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            justify-content: center;-->
-<!--        }-->
-
-<!--        .flow-circle {-->
-<!--            animation: moveDownUp 3s ease-in-out forwards;-->
-<!--        }-->
-
-<!--        .next-circle {-->
-<!--            background: blue;-->
-<!--            animation: moveDownUp 3s ease-in-out forwards 3s;-->
-<!--        }-->
-
-<!--        .third-circle {-->
-<!--            background: green;-->
-<!--            animation: moveDownUp 3s ease-in-out forwards 6s;-->
-<!--        }-->
-
-<!--        @keyframes moveDownUp {-->
-<!--            0% { transform: translateY(-200%); opacity: 0; }-->
-<!--            50% { transform: translateY(0); opacity: 1; }-->
-<!--            100% { transform: translateY(200%); opacity: 0; }-->
-<!--        }-->
-<!--    </style>-->
-<!--</head>-->
-<!--<body>-->
-<!--<div class="outer-circle">-->
-<!--    <div class="inner-circle">-->
-<!--        <div class="flow-circle">Scroll</div>-->
-<!--        <div class="next-circle">Next</div>-->
-<!--        <div class="third-circle">Coming Soon</div>-->
-<!--    </div>-->
-<!--</div>-->
-<!--</body>-->
-<!--</html>-->
